@@ -1,2 +1,5 @@
 # Create-a-Database
-SQL script for creating a database in mysql. Raw data sample sales data. Cleaned and processed data.
+
+  <h3>Files include the SQL script used to create the relational database and tables.</h3>
+  <h3>Tutorial for creating a database using MySQL <a href="datawithnat.com/r_database.html">datawithnat.com</a>.</h3>
+                                                                  
