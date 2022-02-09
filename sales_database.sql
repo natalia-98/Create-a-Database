@@ -39,7 +39,7 @@ CREATE TABLE products (
     PRIMARY KEY (product_code)
     );
 
--- Create table 4; order_status
+-- Create table 4: order_status
 DROP TABLE IF EXISTS order_status;
 CREATE TABLE order_status (
 	order_number_line VARCHAR(45),
@@ -47,27 +47,14 @@ CREATE TABLE order_status (
     FOREIGN KEY (order_number_line) REFERENCES orders(order_number_line)
     );
   
--- NOTE: Import data into the empty data tables BEFORE adding foreign key constraints or else an error will occur.
+-- IMPORTANT NOTE: Import data into the empty data tables BEFORE adding foreign key constraints or else an error will occur.
+
 -- Alter table 1: orders to add foreign keys
 ALTER TABLE orders
 ADD FOREIGN KEY (customer_name) REFERENCES customers(customer_name);
 
 ALTER TABLE orders
 ADD FOREIGN KEY (product_code) REFERENCES products(product_code);
-
--- Import data into table: orders
--- SHOW GLOBAL VARIABLES LIKE 'local_infile';
--- SET GLOBAL local_infile = 'ON';
--- set global local_infile=true;
--- SHOW GLOBAL VARIABLES LIKE 'local_infile';
-
--- LOAD DATA INFILE 'orders.csv'
--- INTO TABLE orders
--- FIELDS TERMINATED BY ','
--- ENCLOSED BY  '"'
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS;
-
 
 
 	
