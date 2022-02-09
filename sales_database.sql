@@ -56,6 +56,3 @@ ADD FOREIGN KEY (customer_name) REFERENCES customers(customer_name);
 ALTER TABLE orders
 ADD FOREIGN KEY (product_code) REFERENCES products(product_code);
 
-
-	
-
